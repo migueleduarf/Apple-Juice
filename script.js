@@ -69,6 +69,98 @@ const baseProducts = [
     rating: 4.4,
     reviews: 156,
     category: "Home Office"
+  },
+  // Periféricos
+  {
+    id: 7,
+    name: "Mouse Gamer RGB 12000 DPI - Sensor Óptico Premium",
+    price: 299.99,
+    originalPrice: 449.99,
+    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VzZSUyMGdhbWluZ3xlbnwxfHx8fDE3NTk0NDE1Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.7,
+    reviews: 412,
+    category: "Periféricos"
+  },
+  {
+    id: 8,
+    name: "Headset Gamer 7.1 Surround - Som Imersivo",
+    price: 349.99,
+    originalPrice: 499.99,
+    image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFkc2V0JTIwZ2FtaW5nfGVufDF8fHx8MTc1OTQ0MTU0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.6,
+    reviews: 298,
+    category: "Periféricos"
+  },
+  {
+    id: 9,
+    name: "Webcam 4K Ultra HD - Streaming Profissional",
+    price: 599.99,
+    originalPrice: 799.99,
+    image: "https://images.unsplash.com/photo-1611532736947-7c2cb99e5451?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWJjYW0lMjA0a3xlbnwxfHx8fDE3NTk0NDE1NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.8,
+    reviews: 167,
+    category: "Periféricos"
+  },
+  {
+    id: 10,
+    name: "Mousepad XXL Gaming - Base Antiderrapante",
+    price: 89.99,
+    originalPrice: 129.99,
+    image: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VzZXBhZCUyMGdhbWluZ3xlbnwxfHx8fDE3NTk0NDE1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.5,
+    reviews: 234,
+    category: "Periféricos"
+  },
+  // Componentes
+  {
+    id: 11,
+    name: "Memória RAM DDR5 32GB 5600MHz - Kit Dual Channel",
+    price: 1899.99,
+    originalPrice: 2299.99,
+    image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW1vcnklMjByYW18ZW58MXx8fHwxNzU5NDQxNTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.9,
+    reviews: 145,
+    category: "Componentes"
+  },
+  {
+    id: 12,
+    name: "SSD NVMe 2TB Gen4 - Velocidade Extrema",
+    price: 1299.99,
+    originalPrice: 1699.99,
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzc2QlMjBudm1lfGVufDF8fHx8MTc1OTQ0MTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.8,
+    reviews: 234,
+    category: "Componentes"
+  },
+  {
+    id: 13,
+    name: "Fonte Modular 850W 80+ Gold - Eficiência Máxima",
+    price: 899.99,
+    originalPrice: 1199.99,
+    image: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMHN1cHBseXxlbnwxfHx8fDE3NTk0NDE1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.7,
+    reviews: 187,
+    category: "Componentes"
+  },
+  {
+    id: 14,
+    name: "Cooler CPU AIO 240mm RGB - Refrigeração Líquida",
+    price: 699.99,
+    originalPrice: 949.99,
+    image: "https://images.unsplash.com/photo-1555617981-dac675c97c8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb29sZXIlMjBjcHV8ZW58MXx8fHwxNzU5NDQxNTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.6,
+    reviews: 156,
+    category: "Componentes"
+  },
+  {
+    id: 15,
+    name: "Motherboard X670E ATX - AMD AM5 DDR5",
+    price: 1899.99,
+    originalPrice: 2399.99,
+    image: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3RoZXJib2FyZHxlbnwxfHx8fDE3NTk0NDE1NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.8,
+    reviews: 98,
+    category: "Componentes"
   }
 ];
 
@@ -194,11 +286,11 @@ function getCurrentPromoInfo() {
     };
   } else if (hour >= 6 && hour < 12) {
     return {
-      title: "☀️ MANHÃ PRODUTIVA",
-      description: "Equipamentos Home Office com descontos especiais da manhã!",
-      badge: "Home Office",
-      color: "bg-blue-600",
-      discount: "até 30%"
+      title: "🌅 OFERTA MATINAL",
+      description: "Componentes e periféricos com preços especiais para você começar bem o dia!",
+      badge: "Componentes & Periféricos",
+      color: "bg-emerald-600",
+      discount: "até 35%"
     };
   } else if (hour >= 12 && hour < 18) {
     return {
@@ -315,6 +407,15 @@ function renderPage() {
     case 'accessories':
       renderCategoryPage(mainContent, 'Acessórios');
       break;
+    case 'peripherals':
+      renderPeripheralsPage(mainContent);
+      break;
+    case 'components':
+      renderComponentsPage(mainContent);
+      break;
+    case 'promotions':
+      renderPromotionsPage(mainContent);
+      break;
     case 'checkout':
       renderCheckoutPage(mainContent);
       break;
@@ -423,40 +524,68 @@ function renderCategorySection() {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-foreground mb-4">Categorias</h2>
-          <p class="text-lg text-muted-foreground">Encontre produtos por categoria</p>
+          <p class="text-lg text-muted-foreground">Navegue pelas nossas categorias especializadas</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div onclick="navigateTo('gaming')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
+        <!-- Categorias Principais -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mb-8">
+          <div onclick="navigateTo('gaming')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
             <div class="text-red-800 mb-4">
               <i data-lucide="gamepad-2" class="w-12 h-12 mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">Gaming</h3>
-            <p class="text-muted-foreground">PCs, placas de vídeo, periféricos</p>
+            <p class="text-muted-foreground text-sm">PCs, placas de vídeo</p>
           </div>
           
-          <div onclick="navigateTo('home-office')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
+          <div onclick="navigateTo('home-office')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
             <div class="text-red-800 mb-4">
               <i data-lucide="home" class="w-12 h-12 mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">Home Office</h3>
-            <p class="text-muted-foreground">Monitores, cadeiras, mesas</p>
+            <p class="text-muted-foreground text-sm">Monitores, cadeiras</p>
           </div>
           
-          <div onclick="navigateTo('professional')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
+          <div onclick="navigateTo('professional')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
             <div class="text-red-800 mb-4">
               <i data-lucide="briefcase" class="w-12 h-12 mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">Profissional</h3>
-            <p class="text-muted-foreground">Workstations, servidores</p>
+            <p class="text-muted-foreground text-sm">Workstations, servidores</p>
           </div>
           
-          <div onclick="navigateTo('accessories')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
+          <div onclick="navigateTo('accessories')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
             <div class="text-red-800 mb-4">
-              <i data-lucide="usb" class="w-12 h-12 mx-auto"></i>
+              <i data-lucide="headphones" class="w-12 h-12 mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">Acessórios</h3>
-            <p class="text-muted-foreground">Cabos, carregadores, hubs</p>
+            <p class="text-muted-foreground text-sm">Cabos, hubs</p>
+          </div>
+        </div>
+
+        <!-- Categorias Específicas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div onclick="navigateTo('peripherals')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-950/20 dark:to-red-900/20 border-red-200 dark:border-red-800">
+            <div class="text-red-800 mb-4">
+              <i data-lucide="mouse" class="w-10 h-10 mx-auto"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Periféricos</h3>
+            <p class="text-muted-foreground text-sm">Teclados, mouses, headsets</p>
+          </div>
+          
+          <div onclick="navigateTo('components')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-950/20 dark:to-red-900/20 border-red-200 dark:border-red-800">
+            <div class="text-red-800 mb-4">
+              <i data-lucide="cpu" class="w-10 h-10 mx-auto"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Componentes</h3>
+            <p class="text-muted-foreground text-sm">Processadores, memórias, SSDs</p>
+          </div>
+          
+          <div onclick="navigateTo('promotions')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-yellow-50 to-orange-100 dark:from-yellow-950/20 dark:to-orange-900/20 border-yellow-200 dark:border-orange-800">
+            <div class="text-orange-600 mb-4">
+              <i data-lucide="percent" class="w-10 h-10 mx-auto"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 text-orange-800 dark:text-orange-400">Promoções</h3>
+            <p class="text-muted-foreground text-sm">Ofertas especiais e descontos</p>
           </div>
         </div>
       </div>
@@ -1310,6 +1439,181 @@ function scrollToCategories() {
   const categoriesSection = document.getElementById('categorias');
   if (categoriesSection) {
     categoriesSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// New Category Pages
+function renderPeripheralsPage(container) {
+  const peripheralProducts = products.filter(p => p.category === 'Periféricos');
+  
+  container.innerHTML = `
+    <div class="min-h-screen bg-background">
+      <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <button onclick="navigateTo('home')" class="inline-flex items-center mb-6 text-purple-200 hover:text-white transition-colors">
+            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+            Voltar ao Início
+          </button>
+          <div class="flex items-center justify-center mb-6">
+            <i data-lucide="mouse" class="w-16 h-16 mr-4"></i>
+            <div>
+              <h1 class="text-4xl font-bold mb-2">Periféricos Gaming</h1>
+              <p class="text-xl text-purple-200">Teclados, mouses, headsets e acessórios para performance máxima</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Produtos em Destaque</h2>
+            <p class="text-lg text-muted-foreground">${peripheralProducts.length} produtos encontrados</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            ${peripheralProducts.map(product => renderProductCard(product)).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+}
+
+function renderComponentsPage(container) {
+  const componentProducts = products.filter(p => p.category === 'Componentes');
+  
+  container.innerHTML = `
+    <div class="min-h-screen bg-background">
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <button onclick="navigateTo('home')" class="inline-flex items-center mb-6 text-blue-200 hover:text-white transition-colors">
+            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+            Voltar ao Início
+          </button>
+          <div class="flex items-center justify-center mb-6">
+            <i data-lucide="cpu" class="w-16 h-16 mr-4"></i>
+            <div>
+              <h1 class="text-4xl font-bold mb-2">Componentes PC</h1>
+              <p class="text-xl text-blue-200">Processadores, memórias, SSDs e mais para seu build</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Componentes Premium</h2>
+            <p class="text-lg text-muted-foreground">${componentProducts.length} produtos encontrados</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            ${componentProducts.map(product => renderProductCard(product)).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+}
+
+function renderPromotionsPage(container) {
+  const promoInfo = getCurrentPromoInfo();
+  const onSaleProducts = products.filter(p => p.isOnSale);
+  const promoStats = getPromoStats();
+  
+  container.innerHTML = `
+    <div class="min-h-screen bg-background">
+      <div class="bg-gradient-to-r from-red-600 to-orange-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <button onclick="navigateTo('home')" class="inline-flex items-center mb-6 text-red-200 hover:text-white transition-colors">
+            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+            Voltar ao Início
+          </button>
+          <div class="flex items-center justify-center mb-6">
+            <i data-lucide="percent" class="w-16 h-16 mr-4"></i>
+            <div>
+              <h1 class="text-4xl font-bold mb-2">🔥 Promoções Ativas</h1>
+              <p class="text-xl text-red-200">Ofertas especiais com descontos imperdíveis</p>
+            </div>
+          </div>
+          
+          <!-- Banner de Promoção Atual -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mt-8 border border-white/20">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold mb-2">${promoInfo.title}</h3>
+                <p class="text-lg opacity-90">${promoInfo.description}</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="bg-white text-gray-800 px-4 py-2 rounded-full font-medium">
+                  ${promoInfo.badge}
+                </span>
+                <span class="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold">
+                  ${promoInfo.discount}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Estatísticas de Promoções -->
+      <div class="py-8 bg-gradient-to-r from-red-500 to-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
+            <div class="flex flex-col items-center">
+              <div class="text-3xl font-bold mb-2">${promoStats.onSale}</div>
+              <div class="text-sm opacity-90">Produtos em Promoção</div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="text-3xl font-bold mb-2">${promoStats.bestSellers}</div>
+              <div class="text-sm opacity-90">Best Sellers</div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="text-3xl font-bold mb-2">${Math.round((promoStats.onSale / promoStats.total) * 100)}%</div>
+              <div class="text-sm opacity-90">Do catálogo em oferta</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Produtos em Promoção</h2>
+            <p class="text-lg text-muted-foreground">${onSaleProducts.length} ofertas ativas agora</p>
+          </div>
+          
+          ${onSaleProducts.length === 0 ? `
+            <div class="text-center py-12">
+              <i data-lucide="percent" class="w-16 h-16 mx-auto text-muted-foreground mb-4"></i>
+              <h3 class="text-xl font-semibold text-foreground mb-4">Nenhuma promoção ativa no momento</h3>
+              <p class="text-muted-foreground mb-6">As promoções mudam dinamicamente. Volte em breve!</p>
+              <button onclick="navigateTo('home')" class="bg-red-800 hover:bg-red-900 text-white px-6 py-2 rounded-lg transition-colors">
+                Ver Todos os Produtos
+              </button>
+            </div>
+          ` : `
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              ${onSaleProducts.map(product => renderProductCard(product)).join('')}
+            </div>
+          `}
+        </div>
+      </div>
+    </div>
+  `;
+  
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
   }
 }
 
