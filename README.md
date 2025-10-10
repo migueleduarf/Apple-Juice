@@ -133,22 +133,6 @@ O site inclui **25+ produtos** organizados em 7 categorias completas:
 - Best sellers atualizados
 - Contador de tempo para próxima promoção
 
-## ⚡ Sistema de Promoções (Atualizado a Cada Minuto)
-
-### Por Horário (6 em 6 horas)
-- **00:00-06:00**: 🌙 Super Madrugada - Gaming em destaque (até 35% OFF)
-- **06:00-12:00**: ☀️ Manhã Produtiva - Home Office (até 30% OFF)
-- **12:00-18:00**: 💼 Tarde Profissional - Uso Profissional (até 40% OFF)
-- **18:00-00:00**: 🎮 Noite dos Gamers - Acessórios (até 25% OFF)
-
-### Por Dia da Semana
-- **Segunda**: Gaming com descontos especiais
-- **Terça**: Home Office com ofertas matinais
-- **Quarta**: Uso Profissional em destaque
-- **Quinta**: Acessórios com promoções noturnas
-- **Sexta**: 🔥 FLASH FRIDAY - Todas as categorias (até 50% OFF)
-- **Fim de semana**: 🎮 WEEKEND GAMER - Gaming intenso (até 45% OFF)
-
 ### Funcionalidades Dinâmicas
 - ✅ Atualização automática a cada minuto
 - ✅ Contador de tempo até próxima mudança
