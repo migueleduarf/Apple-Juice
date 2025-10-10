@@ -359,6 +359,67 @@ function applyDynamicPromotions() {
   }));
 }
 
+// Current Promo Info Function
+function getCurrentPromoInfo() {
+  const now = new Date();
+  const hour = now.getHours();
+  const dayOfWeek = now.getDay();
+  
+  if (dayOfWeek === 5) {
+    return {
+      title: "🔥 FLASH FRIDAY",
+      description: "Super descontos em TODAS as categorias! Aproveite!",
+      badge: "Todas Categorias",
+      color: "bg-red-600",
+      discount: "até 50%"
+    };
+  }
+  
+  if (dayOfWeek === 0 || dayOfWeek === 6) {
+    return {
+      title: "🎮 WEEKEND GAMER",
+      description: "Final de semana é hora de jogar! Gaming em destaque!",
+      badge: "Gaming Intenso",
+      color: "bg-purple-600",
+      discount: "até 45%"
+    };
+  }
+  
+  if (hour >= 0 && hour < 6) {
+    return {
+      title: "🌙 SUPER MADRUGADA",
+      description: "Promoções especiais em produtos Gaming para madrugadores!",
+      badge: "Gaming Noturno",
+      color: "bg-indigo-600",
+      discount: "até 35%"
+    };
+  } else if (hour >= 6 && hour < 12) {
+    return {
+      title: "☀️ MANHÃ PRODUTIVA",
+      description: "Equipamentos Home Office com descontos especiais da manhã!",
+      badge: "Home Office",
+      color: "bg-blue-600",
+      discount: "até 30%"
+    };
+  } else if (hour >= 12 && hour < 18) {
+    return {
+      title: "💼 TARDE PROFISSIONAL",
+      description: "Soluções profissionais com preços exclusivos da tarde!",
+      badge: "Uso Profissional",
+      color: "bg-green-600",
+      discount: "até 40%"
+    };
+  } else {
+    return {
+      title: "🎮 NOITE DOS GAMERS",
+      description: "Acessórios e periféricos em promoção para a noite!",
+      badge: "Acessórios",
+      color: "bg-orange-600",
+      discount: "até 25%"
+    };
+  }
+}
+
 // Initialize
 function init() {
   loadTheme();
@@ -1219,7 +1280,84 @@ function renderCheckoutPage(container) {
   `;
 }
 
+// Utility Functions
+function getFilteredProducts() {
+  return products.filter(product => {
+    const matchesSearch = searchTerm === '' || 
+      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesCategory = selectedCategory === 'Todos' || 
+      product.category === selectedCategory ||
+      (selectedCategory === 'Profissional' && product.category === 'Uso Profissional');
+    
+    return matchesSearch && matchesCategory;
+  });
+}
 
+function getPromoStats() {
+  const onSale = products.filter(p => p.isOnSale).length;
+  const bestSellers = products.filter(p => p.isBestSeller).length;
+  return { onSale, bestSellers, total: products.length };
+}
+
+function getNextPromoChange() {
+  const now = new Date();
+  const hour = now.getHours();
+  const dayOfWeek = now.getDay();
+  
+  let nextChangeTime = new Date(now);
+  let nextPromoType = '';
+  
+  if (dayOfWeek === 5) {
+    nextChangeTime.setDate(nextChangeTime.getDate() + 1);
+    nextChangeTime.setHours(0, 0, 0, 0);
+    nextPromoType = '🎮 Weekend Gamer';
+  }
+  else if (dayOfWeek === 0 || dayOfWeek === 6) {
+    const daysUntilMonday = dayOfWeek === 0 ? 1 : 2;
+    nextChangeTime.setDate(nextChangeTime.getDate() + daysUntilMonday);
+    nextChangeTime.setHours(0, 0, 0, 0);
+    nextPromoType = '☀️ Manhã Produtiva';
+  }
+  else if (dayOfWeek === 4 && hour >= 18) {
+    nextChangeTime.setDate(nextChangeTime.getDate() + 1);
+    nextChangeTime.setHours(0, 0, 0, 0);
+    nextPromoType = '🔥 Flash Friday';
+  }
+  else {
+    const currentSlot = Math.floor(hour / 6);
+    const nextSlotHour = (currentSlot + 1) * 6;
+    
+    if (nextSlotHour >= 24) {
+      nextChangeTime.setDate(nextChangeTime.getDate() + 1);
+      nextChangeTime.setHours(0, 0, 0, 0);
+      nextPromoType = '☀️ Manhã Produtiva';
+    } else {
+      nextChangeTime.setHours(nextSlotHour, 0, 0, 0);
+      if (nextSlotHour === 6) nextPromoType = '☀️ Manhã Produtiva';
+      else if (nextSlotHour === 12) nextPromoType = '💼 Tarde Profissional';
+      else if (nextSlotHour === 18) nextPromoType = '🎮 Noite dos Gamers';
+      else nextPromoType = '🌙 Super Madrugada';
+    }
+  }
+  
+  return { nextChangeTime, nextPromoType };
+}
+
+function getTimeLeft() {
+  const nextPromo = getNextPromoChange();
+  const now = new Date();
+  const diff = nextPromo.nextChangeTime.getTime() - now.getTime();
+  const hoursLeft = Math.floor(diff / (1000 * 60 * 60));
+  const minutesLeft = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  
+  if (hoursLeft > 0) {
+    return `${hoursLeft}h ${minutesLeft}m`;
+  } else {
+    return `${minutesLeft}m`;
+  }
+}
 
 // Event Handlers
 function handleSearch(term) {
