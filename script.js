@@ -359,6 +359,66 @@ function applyDynamicPromotions() {
   }));
 }
 
+// Current Promo Info Function
+function getCurrentPromoInfo() {
+  const now = new Date();
+  const hour = now.getHours();
+  const dayOfWeek = now.getDay();
+  
+  if (dayOfWeek === 5) {
+    return {
+      title: "🔥 FLASH FRIDAY",
+      description: "Super descontos em TODAS as categorias! Aproveite!",
+      badge: "Todas Categorias",
+      color: "bg-red-600",
+      discount: "até 50%"
+    };
+  }
+  
+  if (dayOfWeek === 0 || dayOfWeek === 6) {
+    return {
+      title: "🎮 WEEKEND GAMER",
+      description: "Final de semana é hora de jogar! Gaming em destaque!",
+      badge: "Gaming Intenso",
+      color: "bg-purple-600",
+      discount: "até 45%"
+    };
+  }
+  
+  if (hour >= 0 && hour < 6) {
+    return {
+      title: "🌙 SUPER MADRUGADA",
+      description: "Promoções especiais em produtos Gaming para madrugadores!",
+      badge: "Gaming Noturno",
+      color: "bg-indigo-600",
+      discount: "até 35%"
+    };
+  } else if (hour >= 6 && hour < 12) {
+    return {
+      title: "☀️ MANHÃ PRODUTIVA",
+      description: "Equipamentos Home Office com descontos especiais da manhã!",
+      badge: "Home Office",
+      color: "bg-blue-600",
+      discount: "até 30%"
+    };
+  } else if (hour >= 12 && hour < 18) {
+    return {
+      title: "💼 TARDE PROFISSIONAL",
+      description: "Soluções profissionais com preços exclusivos da tarde!",
+      badge: "Uso Profissional",
+      color: "bg-green-600",
+      discount: "até 40%"
+    };
+  } else {
+    return {
+      title: "🎮 NOITE DOS GAMERS",
+      description: "Acessórios e periféricos em promoção para a noite!",
+      badge: "Acessórios",
+      color: "bg-orange-600",
+      discount: "até 25%"
+    };
+  }
+}
 
 // Initialize
 function init() {
