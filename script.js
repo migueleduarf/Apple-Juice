@@ -10,6 +10,7 @@ let products = [];
 
 // Products Database with Dynamic Promotions
 const baseProducts = [
+  // Gaming
   {
     id: 1,
     name: "Placa de Vídeo RTX 4080 Super - 16GB GDDR6X",
@@ -42,14 +43,16 @@ const baseProducts = [
   },
   {
     id: 4,
-    name: "Teclado Mecânico RGB - Switches Cherry MX Blue",
-    price: 649.99,
-    originalPrice: 899.99,
-    image: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNsYWRvJTIwbWVjYW5pY28lMjByZ2J8ZW58MXx8fHwxNzU5NDQxNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    rating: 4.6,
-    reviews: 523,
+    name: "PC Gamer Completo - RTX 4070 Ti + Ryzen 9",
+    price: 9999.99,
+    originalPrice: 12999.99,
+    image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBwY3xlbnwxfHx8fDE3NTk0NDE1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.9,
+    reviews: 412,
     category: "Gaming"
   },
+  
+  // Home Office
   {
     id: 5,
     name: "Cadeira Gamer Ergonômica - Suporte Lombar Premium",
@@ -70,96 +73,202 @@ const baseProducts = [
     reviews: 156,
     category: "Home Office"
   },
-  // Periféricos
   {
     id: 7,
-    name: "Mouse Gamer RGB 12000 DPI - Sensor Óptico Premium",
+    name: "Notebook Ultrabook - i7 11ª Gen, 16GB RAM",
+    price: 4599.99,
+    originalPrice: 5999.99,
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3B8ZW58MXx8fHwxNzU5NDQxNTI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.7,
+    reviews: 301,
+    category: "Home Office"
+  },
+  {
+    id: 8,
+    name: "Webcam Full HD 1080p - Microfone Integrado",
+    price: 349.99,
+    originalPrice: 499.99,
+    image: "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWJjYW18ZW58MXx8fHwxNzU5NDQxNTI3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.3,
+    reviews: 278,
+    category: "Home Office"
+  },
+  
+  // Uso Profissional
+  {
+    id: 9,
+    name: "Workstation Dell Precision - Xeon + 64GB RAM",
+    price: 15999.99,
+    originalPrice: 19999.99,
+    image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3Jrc3RhdGlvbiUyMGNvbXB1dGVyfGVufDF8fHx8MTc1OTQ0MTUyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.8,
+    reviews: 89,
+    category: "Uso Profissional"
+  },
+  {
+    id: 10,
+    name: "Monitor Profissional 27\" 4K - Calibração de Cores",
+    price: 3299.99,
+    originalPrice: 4499.99,
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb25pdG9yJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc1OTQ0MTUzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.9,
+    reviews: 143,
+    category: "Uso Profissional"
+  },
+  {
+    id: 11,
+    name: "Servidor Rack HP - Dual Xeon, 128GB RAM",
+    price: 24999.99,
+    originalPrice: 29999.99,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJ2ZXIlMjByYWNrfGVufDF8fHx8MTc1OTQ0MTUzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.7,
+    reviews: 67,
+    category: "Uso Profissional"
+  },
+  {
+    id: 12,
+    name: "Plotter HP DesignJet - Impressão Profissional A0",
+    price: 18999.99,
+    originalPrice: 22999.99,
+    image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwcmludGVyfGVufDF8fHx8MTc1OTQ0MTUzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.6,
+    reviews: 54,
+    category: "Uso Profissional"
+  },
+  
+  // Acessórios
+  {
+    id: 13,
+    name: "Hub USB-C 7 em 1 - HDMI 4K + Ethernet",
+    price: 249.99,
+    originalPrice: 399.99,
+    image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2IlMjBodWJ8ZW58MXx8fHwxNzU5NDQxNTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.5,
+    reviews: 512,
+    category: "Acessórios"
+  },
+  {
+    id: 14,
+    name: "Suporte Monitor Articulado - Duplo",
+    price: 349.99,
+    originalPrice: 499.99,
+    image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb25pdG9yJTIwYXJtfGVufDF8fHx8MTc1OTQ0MTUzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.6,
+    reviews: 287,
+    category: "Acessórios"
+  },
+  {
+    id: 15,
+    name: "Mousepad XL Gamer - 900x400mm RGB",
+    price: 129.99,
+    originalPrice: 199.99,
+    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VzZXBhZCUyMGdhbWVyfGVufDF8fHx8MTc1OTQ0MTU0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.4,
+    reviews: 623,
+    category: "Acessórios"
+  },
+  {
+    id: 16,
+    name: "Fone Headset Gamer - 7.1 Surround + Microfone",
+    price: 449.99,
+    originalPrice: 699.99,
+    image: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBoZWFkc2V0fGVufDF8fHx8MTc1OTQ0MTU0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.7,
+    reviews: 891,
+    category: "Acessórios"
+  },
+  
+  // Periféricos
+  {
+    id: 17,
+    name: "Teclado Mecânico RGB - Switches Cherry MX Blue",
+    price: 649.99,
+    originalPrice: 899.99,
+    image: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNsYWRvJTIwbWVjYW5pY28lMjByZ2J8ZW58MXx8fHwxNzU5NDQxNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.6,
+    reviews: 523,
+    category: "Periféricos"
+  },
+  {
+    id: 18,
+    name: "Mouse Gamer RGB - 16000 DPI + 7 Botões",
     price: 299.99,
     originalPrice: 449.99,
-    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VzZSUyMGdhbWluZ3xlbnwxfHx8fDE3NTk0NDE1Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBtb3VzZXxlbnwxfHx8fDE3NTk0NDE1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.8,
+    reviews: 734,
+    category: "Periféricos"
+  },
+  {
+    id: 19,
+    name: "Impressora Multifuncional HP - Tanque de Tinta",
+    price: 1099.99,
+    originalPrice: 1499.99,
+    image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmludGVyfGVufDF8fHx8MTc1OTQ0MTU0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.5,
     reviews: 412,
     category: "Periféricos"
   },
   {
-    id: 8,
-    name: "Headset Gamer 7.1 Surround - Som Imersivo",
-    price: 349.99,
-    originalPrice: 499.99,
-    image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFkc2V0JTIwZ2FtaW5nfGVufDF8fHx8MTc1OTQ0MTU0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-    rating: 4.6,
-    reviews: 298,
+    id: 20,
+    name: "Joystick Xbox Series X - Wireless Bluetooth",
+    price: 449.99,
+    originalPrice: 599.99,
+    image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1lJTIwY29udHJvbGxlcnxlbnwxfHx8fDE3NTk0NDE1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.9,
+    reviews: 856,
     category: "Periféricos"
   },
-  {
-    id: 9,
-    name: "Webcam 4K Ultra HD - Streaming Profissional",
-    price: 599.99,
-    originalPrice: 799.99,
-    image: "https://images.unsplash.com/photo-1611532736947-7c2cb99e5451?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWJjYW0lMjA0a3xlbnwxfHx8fDE3NTk0NDE1NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    rating: 4.8,
-    reviews: 167,
-    category: "Periféricos"
-  },
-  {
-    id: 10,
-    name: "Mousepad XXL Gaming - Base Antiderrapante",
-    price: 89.99,
-    originalPrice: 129.99,
-    image: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VzZXBhZCUyMGdhbWluZ3xlbnwxfHx8fDE3NTk0NDE1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    rating: 4.5,
-    reviews: 234,
-    category: "Periféricos"
-  },
+  
   // Componentes
   {
-    id: 11,
-    name: "Memória RAM DDR5 32GB 5600MHz - Kit Dual Channel",
-    price: 1899.99,
-    originalPrice: 2299.99,
-    image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW1vcnklMjByYW18ZW58MXx8fHwxNzU5NDQxNTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    rating: 4.9,
-    reviews: 145,
-    category: "Componentes"
-  },
-  {
-    id: 12,
-    name: "SSD NVMe 2TB Gen4 - Velocidade Extrema",
-    price: 1299.99,
-    originalPrice: 1699.99,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzc2QlMjBudm1lfGVufDF8fHx8MTc1OTQ0MTU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    id: 21,
+    name: "SSD NVMe 2TB - PCIe Gen 4 7000MB/s",
+    price: 999.99,
+    originalPrice: 1499.99,
+    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzc2QlMjBkcml2ZXxlbnwxfHx8fDE3NTk0NDE1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
     rating: 4.8,
-    reviews: 234,
+    reviews: 567,
     category: "Componentes"
   },
   {
-    id: 13,
-    name: "Fonte Modular 850W 80+ Gold - Eficiência Máxima",
+    id: 22,
+    name: "Memória RAM DDR5 32GB - 6000MHz RGB",
     price: 899.99,
     originalPrice: 1199.99,
-    image: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMHN1cHBseXxlbnwxfHx8fDE3NTk0NDE1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyYW0lMjBtZW1vcnl8ZW58MXx8fHwxNzU5NDQxNTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
     rating: 4.7,
-    reviews: 187,
+    reviews: 423,
     category: "Componentes"
   },
   {
-    id: 14,
-    name: "Cooler CPU AIO 240mm RGB - Refrigeração Líquida",
-    price: 699.99,
-    originalPrice: 949.99,
-    image: "https://images.unsplash.com/photo-1555617981-dac675c97c8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb29sZXIlMjBjcHV8ZW58MXx8fHwxNzU5NDQxNTUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    id: 23,
+    name: "Fonte 850W 80 Plus Gold - Modular Full",
+    price: 749.99,
+    originalPrice: 999.99,
+    image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMHN1cHBseXxlbnwxfHx8fDE3NTk0NDE1NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.9,
+    reviews: 387,
+    category: "Componentes"
+  },
+  {
+    id: 24,
+    name: "Placa Mãe B650 - AM5 DDR5 PCIe 5.0",
+    price: 1299.99,
+    originalPrice: 1699.99,
+    image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3RoZXJib2FyZHxlbnwxfHx8fDE3NTk0NDE1NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     rating: 4.6,
-    reviews: 156,
+    reviews: 298,
     category: "Componentes"
   },
   {
-    id: 15,
-    name: "Motherboard X670E ATX - AMD AM5 DDR5",
-    price: 1899.99,
-    originalPrice: 2399.99,
-    image: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3RoZXJib2FyZHxlbnwxfHx8fDE3NTk0NDE1NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    rating: 4.8,
-    reviews: 98,
+    id: 25,
+    name: "Water Cooler 360mm RGB - Sistema de Refrigeração",
+    price: 799.99,
+    originalPrice: 1099.99,
+    image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb29saW5nJTIwc3lzdGVtfGVufDF8fHx8MTc1OTQ0MTU1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 4.7,
+    reviews: 456,
     category: "Componentes"
   }
 ];
@@ -286,11 +395,11 @@ function getCurrentPromoInfo() {
     };
   } else if (hour >= 6 && hour < 12) {
     return {
-      title: "🌅 OFERTA MATINAL",
-      description: "Componentes e periféricos com preços especiais para você começar bem o dia!",
-      badge: "Componentes & Periféricos",
-      color: "bg-emerald-600",
-      discount: "até 35%"
+      title: "☀️ MANHÃ PRODUTIVA",
+      description: "Equipamentos Home Office com descontos especiais da manhã!",
+      badge: "Home Office",
+      color: "bg-blue-600",
+      discount: "até 30%"
     };
   } else if (hour >= 12 && hour < 18) {
     return {
@@ -337,12 +446,30 @@ function initializeProducts() {
 }
 
 function startPromoTimer() {
+  // Update promotions every minute
   setInterval(() => {
     initializeProducts();
     if (currentPage === 'home') {
-      renderFeaturedProducts();
-      renderHeroSection();
+      const heroSection = document.querySelector('.bg-gradient-to-r');
+      if (heroSection) {
+        // Re-render just the hero section with updated promo info
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+          renderHomePage(mainContent);
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+        }
+      }
+    } else if (currentPage === 'promotions') {
+      renderPage();
     }
+  }, 60 * 1000); // Update every minute
+  
+  // Also update every 6 hours for major promo changes
+  setInterval(() => {
+    initializeProducts();
+    renderPage();
   }, 6 * 60 * 60 * 1000); // Update every 6 hours
 }
 
@@ -386,6 +513,22 @@ function navigateTo(page) {
   renderPage();
   closeMobileMenu();
   toggleCart(false);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  // Update page title
+  const pageTitles = {
+    'home': 'Apple Juice - E-commerce de Tecnologia',
+    'gaming': 'Gaming - Apple Juice',
+    'home-office': 'Home Office - Apple Juice',
+    'professional': 'Uso Profissional - Apple Juice',
+    'accessories': 'Acessórios - Apple Juice',
+    'peripherals': 'Periféricos - Apple Juice',
+    'components': 'Componentes - Apple Juice',
+    'promotions': 'Promoções - Apple Juice',
+    'checkout': 'Checkout - Apple Juice'
+  };
+  
+  document.title = pageTitles[page] || pageTitles['home'];
 }
 
 function renderPage() {
@@ -408,10 +551,10 @@ function renderPage() {
       renderCategoryPage(mainContent, 'Acessórios');
       break;
     case 'peripherals':
-      renderPeripheralsPage(mainContent);
+      renderCategoryPage(mainContent, 'Periféricos');
       break;
     case 'components':
-      renderComponentsPage(mainContent);
+      renderCategoryPage(mainContent, 'Componentes');
       break;
     case 'promotions':
       renderPromotionsPage(mainContent);
@@ -524,68 +667,72 @@ function renderCategorySection() {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-foreground mb-4">Categorias</h2>
-          <p class="text-lg text-muted-foreground">Navegue pelas nossas categorias especializadas</p>
+          <p class="text-lg text-muted-foreground">Encontre produtos por categoria</p>
         </div>
         
-        <!-- Categorias Principais -->
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mb-8">
-          <div onclick="navigateTo('gaming')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div onclick="navigateTo('gaming')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
             <div class="text-red-800 mb-4">
               <i data-lucide="gamepad-2" class="w-12 h-12 mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">Gaming</h3>
-            <p class="text-muted-foreground text-sm">PCs, placas de vídeo</p>
+            <p class="text-muted-foreground">PCs, placas de vídeo, monitores</p>
           </div>
           
-          <div onclick="navigateTo('home-office')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+          <div onclick="navigateTo('home-office')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
             <div class="text-red-800 mb-4">
               <i data-lucide="home" class="w-12 h-12 mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">Home Office</h3>
-            <p class="text-muted-foreground text-sm">Monitores, cadeiras</p>
+            <p class="text-muted-foreground">Cadeiras, mesas, notebooks</p>
           </div>
           
-          <div onclick="navigateTo('professional')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+          <div onclick="navigateTo('professional')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
             <div class="text-red-800 mb-4">
               <i data-lucide="briefcase" class="w-12 h-12 mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">Profissional</h3>
-            <p class="text-muted-foreground text-sm">Workstations, servidores</p>
+            <p class="text-muted-foreground">Workstations, servidores</p>
           </div>
           
-          <div onclick="navigateTo('accessories')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+          <div onclick="navigateTo('accessories')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
             <div class="text-red-800 mb-4">
-              <i data-lucide="headphones" class="w-12 h-12 mx-auto"></i>
+              <i data-lucide="usb" class="w-12 h-12 mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-2">Acessórios</h3>
-            <p class="text-muted-foreground text-sm">Cabos, hubs</p>
-          </div>
-        </div>
-
-        <!-- Categorias Específicas -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div onclick="navigateTo('peripherals')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-950/20 dark:to-red-900/20 border-red-200 dark:border-red-800">
-            <div class="text-red-800 mb-4">
-              <i data-lucide="mouse" class="w-10 h-10 mx-auto"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Periféricos</h3>
-            <p class="text-muted-foreground text-sm">Teclados, mouses, headsets</p>
+            <p class="text-muted-foreground">Hubs, suportes, headsets</p>
           </div>
           
-          <div onclick="navigateTo('components')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-950/20 dark:to-red-900/20 border-red-200 dark:border-red-800">
+          <div onclick="navigateTo('peripherals')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
             <div class="text-red-800 mb-4">
-              <i data-lucide="cpu" class="w-10 h-10 mx-auto"></i>
+              <i data-lucide="keyboard" class="w-12 h-12 mx-auto"></i>
             </div>
-            <h3 class="text-lg font-semibold mb-2">Componentes</h3>
-            <p class="text-muted-foreground text-sm">Processadores, memórias, SSDs</p>
+            <h3 class="text-xl font-semibold mb-2">Periféricos</h3>
+            <p class="text-muted-foreground">Teclados, mouses, impressoras</p>
           </div>
           
-          <div onclick="navigateTo('promotions')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-yellow-50 to-orange-100 dark:from-yellow-950/20 dark:to-orange-900/20 border-yellow-200 dark:border-orange-800">
-            <div class="text-orange-600 mb-4">
-              <i data-lucide="percent" class="w-10 h-10 mx-auto"></i>
+          <div onclick="navigateTo('components')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300">
+            <div class="text-red-800 mb-4">
+              <i data-lucide="cpu" class="w-12 h-12 mx-auto"></i>
             </div>
-            <h3 class="text-lg font-semibold mb-2 text-orange-800 dark:text-orange-400">Promoções</h3>
-            <p class="text-muted-foreground text-sm">Ofertas especiais e descontos</p>
+            <h3 class="text-xl font-semibold mb-2">Componentes</h3>
+            <p class="text-muted-foreground">SSDs, RAMs, placas mãe</p>
+          </div>
+          
+          <div onclick="navigateTo('promotions')" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-red-50 to-red-100 dark:from-red-950/20 dark:to-red-900/20">
+            <div class="text-red-800 mb-4">
+              <i data-lucide="tag" class="w-12 h-12 mx-auto"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Promoções</h3>
+            <p class="text-muted-foreground">Ofertas especiais do dia</p>
+          </div>
+          
+          <div onclick="scrollToNewsletter()" class="card cursor-pointer text-center hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-red-600 to-red-800 text-white">
+            <div class="mb-4">
+              <i data-lucide="percent" class="w-12 h-12 mx-auto"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Ofertas VIP</h3>
+            <p class="opacity-90">Receba descontos exclusivos</p>
           </div>
         </div>
       </div>
@@ -868,6 +1015,9 @@ function renderFooter() {
               <li><a href="#" onclick="navigateTo('home-office')" class="text-muted-foreground hover:text-foreground">Home Office</a></li>
               <li><a href="#" onclick="navigateTo('professional')" class="text-muted-foreground hover:text-foreground">Profissional</a></li>
               <li><a href="#" onclick="navigateTo('accessories')" class="text-muted-foreground hover:text-foreground">Acessórios</a></li>
+              <li><a href="#" onclick="navigateTo('peripherals')" class="text-muted-foreground hover:text-foreground">Periféricos</a></li>
+              <li><a href="#" onclick="navigateTo('components')" class="text-muted-foreground hover:text-foreground">Componentes</a></li>
+              <li><a href="#" onclick="navigateTo('promotions')" class="text-muted-foreground hover:text-foreground text-red-600">🔥 Promoções</a></li>
             </ul>
           </div>
           
@@ -917,11 +1067,122 @@ function renderCategoryPage(container, category) {
           <h1 class="text-3xl font-bold text-foreground">${category}</h1>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          ${categoryProducts.map(product => renderProductCard(product)).join('')}
+        ${categoryProducts.length === 0 ? `
+          <div class="text-center py-12">
+            <h3 class="text-xl font-semibold text-foreground mb-4">
+              Nenhum produto encontrado nesta categoria
+            </h3>
+            <p class="text-muted-foreground mb-6">
+              Explore outras categorias ou volte para a página inicial
+            </p>
+            <button onclick="navigateTo('home')" class="bg-red-800 hover:bg-red-900 text-white px-6 py-2 rounded-lg transition-colors">
+              Voltar para Início
+            </button>
+          </div>
+        ` : `
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            ${categoryProducts.map(product => renderProductCard(product)).join('')}
+          </div>
+        `}
+      </div>
+    </div>
+    ${renderFooter()}
+  `;
+}
+
+// Promotions Page
+function renderPromotionsPage(container) {
+  const promoInfo = getCurrentPromoInfo();
+  const onSaleProducts = products.filter(p => p.isOnSale);
+  const bestSellerProducts = products.filter(p => p.isBestSeller);
+  const timeLeft = getTimeLeft();
+  
+  container.innerHTML = `
+    <div class="py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center mb-8">
+          <button onclick="navigateTo('home')" class="flex items-center text-muted-foreground hover:text-foreground mr-4">
+            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+            Voltar
+          </button>
+          <h1 class="text-3xl font-bold text-foreground">Promoções Ativas</h1>
+        </div>
+        
+        <!-- Banner de Promoção Atual -->
+        <div class="${promoInfo.color} text-white rounded-xl p-8 mb-12 shadow-lg">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="flex-1 mb-4 md:mb-0">
+              <h2 class="text-3xl font-bold mb-2">${promoInfo.title}</h2>
+              <p class="text-lg opacity-90">${promoInfo.description}</p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <span class="bg-white text-gray-800 px-4 py-2 rounded-full font-bold text-lg">
+                ${promoInfo.badge}
+              </span>
+              <span class="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-xl">
+                ${promoInfo.discount}
+              </span>
+              ${timeLeft ? `
+                <span class="bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                  ⏰ Termina em ${timeLeft}
+                </span>
+              ` : ''}
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produtos em Oferta -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-foreground mb-6">🔥 Produtos em Oferta</h2>
+          ${onSaleProducts.length === 0 ? `
+            <p class="text-muted-foreground text-center py-8">Nenhum produto em oferta no momento</p>
+          ` : `
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              ${onSaleProducts.slice(0, 9).map(product => renderProductCard(product)).join('')}
+            </div>
+          `}
+        </div>
+        
+        <!-- Best Sellers -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-foreground mb-6">⭐ Mais Vendidos</h2>
+          ${bestSellerProducts.length === 0 ? `
+            <p class="text-muted-foreground text-center py-8">Nenhum best seller no momento</p>
+          ` : `
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              ${bestSellerProducts.slice(0, 9).map(product => renderProductCard(product)).join('')}
+            </div>
+          `}
+        </div>
+        
+        <!-- Estatísticas de Promoções -->
+        <div class="bg-gradient-to-r from-red-600 to-red-800 text-white rounded-xl p-8 shadow-lg">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="text-4xl font-bold mb-2">${onSaleProducts.length}</div>
+              <div class="text-lg opacity-90">Produtos em Promoção</div>
+              <div class="text-sm opacity-75 mt-1">
+                ${products.length > 0 ? `${Math.round((onSaleProducts.length / products.length) * 100)}%` : '0%'} do catálogo
+              </div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold mb-2">${bestSellerProducts.length}</div>
+              <div class="text-lg opacity-90">Best Sellers</div>
+              <div class="text-sm opacity-75 mt-1">Mais vendidos agora</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold mb-2">${promoInfo.discount}</div>
+              <div class="text-lg opacity-90">Desconto Máximo</div>
+              <div class="text-sm opacity-75 mt-1">Nas melhores ofertas</div>
+            </div>
+          </div>
+          <div class="text-center mt-6 text-sm opacity-90">
+            🔄 Promoções atualizadas dinamicamente • Aproveite antes que acabe!
+          </div>
         </div>
       </div>
     </div>
+    ${renderFooter()}
   `;
 }
 
@@ -1439,181 +1700,6 @@ function scrollToCategories() {
   const categoriesSection = document.getElementById('categorias');
   if (categoriesSection) {
     categoriesSection.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-// New Category Pages
-function renderPeripheralsPage(container) {
-  const peripheralProducts = products.filter(p => p.category === 'Periféricos');
-  
-  container.innerHTML = `
-    <div class="min-h-screen bg-background">
-      <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <button onclick="navigateTo('home')" class="inline-flex items-center mb-6 text-purple-200 hover:text-white transition-colors">
-            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
-            Voltar ao Início
-          </button>
-          <div class="flex items-center justify-center mb-6">
-            <i data-lucide="mouse" class="w-16 h-16 mr-4"></i>
-            <div>
-              <h1 class="text-4xl font-bold mb-2">Periféricos Gaming</h1>
-              <p class="text-xl text-purple-200">Teclados, mouses, headsets e acessórios para performance máxima</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-foreground mb-4">Produtos em Destaque</h2>
-            <p class="text-lg text-muted-foreground">${peripheralProducts.length} produtos encontrados</p>
-          </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            ${peripheralProducts.map(product => renderProductCard(product)).join('')}
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-  
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
-}
-
-function renderComponentsPage(container) {
-  const componentProducts = products.filter(p => p.category === 'Componentes');
-  
-  container.innerHTML = `
-    <div class="min-h-screen bg-background">
-      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <button onclick="navigateTo('home')" class="inline-flex items-center mb-6 text-blue-200 hover:text-white transition-colors">
-            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
-            Voltar ao Início
-          </button>
-          <div class="flex items-center justify-center mb-6">
-            <i data-lucide="cpu" class="w-16 h-16 mr-4"></i>
-            <div>
-              <h1 class="text-4xl font-bold mb-2">Componentes PC</h1>
-              <p class="text-xl text-blue-200">Processadores, memórias, SSDs e mais para seu build</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-foreground mb-4">Componentes Premium</h2>
-            <p class="text-lg text-muted-foreground">${componentProducts.length} produtos encontrados</p>
-          </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            ${componentProducts.map(product => renderProductCard(product)).join('')}
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-  
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
-}
-
-function renderPromotionsPage(container) {
-  const promoInfo = getCurrentPromoInfo();
-  const onSaleProducts = products.filter(p => p.isOnSale);
-  const promoStats = getPromoStats();
-  
-  container.innerHTML = `
-    <div class="min-h-screen bg-background">
-      <div class="bg-gradient-to-r from-red-600 to-orange-600 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <button onclick="navigateTo('home')" class="inline-flex items-center mb-6 text-red-200 hover:text-white transition-colors">
-            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
-            Voltar ao Início
-          </button>
-          <div class="flex items-center justify-center mb-6">
-            <i data-lucide="percent" class="w-16 h-16 mr-4"></i>
-            <div>
-              <h1 class="text-4xl font-bold mb-2">🔥 Promoções Ativas</h1>
-              <p class="text-xl text-red-200">Ofertas especiais com descontos imperdíveis</p>
-            </div>
-          </div>
-          
-          <!-- Banner de Promoção Atual -->
-          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mt-8 border border-white/20">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div class="flex-1">
-                <h3 class="text-2xl font-bold mb-2">${promoInfo.title}</h3>
-                <p class="text-lg opacity-90">${promoInfo.description}</p>
-              </div>
-              <div class="flex items-center gap-4">
-                <span class="bg-white text-gray-800 px-4 py-2 rounded-full font-medium">
-                  ${promoInfo.badge}
-                </span>
-                <span class="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold">
-                  ${promoInfo.discount}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Estatísticas de Promoções -->
-      <div class="py-8 bg-gradient-to-r from-red-500 to-red-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
-            <div class="flex flex-col items-center">
-              <div class="text-3xl font-bold mb-2">${promoStats.onSale}</div>
-              <div class="text-sm opacity-90">Produtos em Promoção</div>
-            </div>
-            <div class="flex flex-col items-center">
-              <div class="text-3xl font-bold mb-2">${promoStats.bestSellers}</div>
-              <div class="text-sm opacity-90">Best Sellers</div>
-            </div>
-            <div class="flex flex-col items-center">
-              <div class="text-3xl font-bold mb-2">${Math.round((promoStats.onSale / promoStats.total) * 100)}%</div>
-              <div class="text-sm opacity-90">Do catálogo em oferta</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-foreground mb-4">Produtos em Promoção</h2>
-            <p class="text-lg text-muted-foreground">${onSaleProducts.length} ofertas ativas agora</p>
-          </div>
-          
-          ${onSaleProducts.length === 0 ? `
-            <div class="text-center py-12">
-              <i data-lucide="percent" class="w-16 h-16 mx-auto text-muted-foreground mb-4"></i>
-              <h3 class="text-xl font-semibold text-foreground mb-4">Nenhuma promoção ativa no momento</h3>
-              <p class="text-muted-foreground mb-6">As promoções mudam dinamicamente. Volte em breve!</p>
-              <button onclick="navigateTo('home')" class="bg-red-800 hover:bg-red-900 text-white px-6 py-2 rounded-lg transition-colors">
-                Ver Todos os Produtos
-              </button>
-            </div>
-          ` : `
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              ${onSaleProducts.map(product => renderProductCard(product)).join('')}
-            </div>
-          `}
-        </div>
-      </div>
-    </div>
-  `;
-  
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
   }
 }
 
